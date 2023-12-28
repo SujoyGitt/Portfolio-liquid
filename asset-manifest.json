@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-liquid/static/css/main.9b73da41.css",
-    "main.js": "/Portfolio-liquid/static/js/main.346d3502.js",
+    "main.css": "/Portfolio-liquid/static/css/main.b00137ed.css",
+    "main.js": "/Portfolio-liquid/static/js/main.2e127a45.js",
     "static/media/Screenshot_6.png": "/Portfolio-liquid/static/media/Screenshot_6.fa944a1a606764f0a3bc.png",
     "static/media/Screenshot_5.png": "/Portfolio-liquid/static/media/Screenshot_5.bdc3af3a74f6d27a101d.png",
     "static/media/Screenshot_2.png": "/Portfolio-liquid/static/media/Screenshot_2.c2b26ba1d77e599da026.png",
@@ -32,11 +32,11 @@
     "static/media/12.png": "/Portfolio-liquid/static/media/12.ff572ddc991f5dae5881.png",
     "static/media/css3.png": "/Portfolio-liquid/static/media/css3.01af6e5357cc2c119e14.png",
     "index.html": "/Portfolio-liquid/index.html",
-    "main.9b73da41.css.map": "/Portfolio-liquid/static/css/main.9b73da41.css.map",
-    "main.346d3502.js.map": "/Portfolio-liquid/static/js/main.346d3502.js.map"
+    "main.b00137ed.css.map": "/Portfolio-liquid/static/css/main.b00137ed.css.map",
+    "main.2e127a45.js.map": "/Portfolio-liquid/static/js/main.2e127a45.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b73da41.css",
-    "static/js/main.346d3502.js"
+    "static/css/main.b00137ed.css",
+    "static/js/main.2e127a45.js"
   ]
 }
