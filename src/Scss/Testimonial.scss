@@ -1,0 +1,109 @@
+.testimonial {
+  .testimonial-container {
+    > h3 {
+      font-family: inriaserif;
+      font-style: normal;
+    }
+    > h1 {
+      font-family: paprika;
+    }
+    .swiper {
+      width: 100%;
+      height: 400px;
+      margin: 50px 0px;
+      .swiper-wrapper {
+        width: 95%;
+        transition: 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        p {
+          margin: 0px 10px 10px 0px;
+          font-size: 18px;
+          font-weight: 400;
+          color: rgb(104, 104, 104);
+        }
+        h3 {
+          font-weight: 700;
+          font-family: paprika;
+        }
+
+        .swiper-slide:not(.swiper-slide-active) {
+          filter: blur(8px);
+          transform: scale(0.8) translateY(50px);
+        }
+        img {
+          object-fit: cover;
+        }
+      }
+      .swiper-pagination {
+        .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+        }
+        .swiper-pagination-bullet-active {
+          background: var(--black);
+        }
+      }
+    }
+  }
+  .circle,
+  .one {
+    animation: circleanimate 2s linear infinite alternate-reverse;
+  }
+  @keyframes circleanimate {
+    from {
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial {
+    .testimonial-container {
+      .swiper {
+        height: 700px;
+
+        .swiper-wrapper {
+          width: 100%;
+          .swiper-slide:not(.swiper-slide-active) {
+            filter: blur(8px);
+            transform: scale(0.8) translateY(100px);
+          }
+          .review-container {
+            flex-direction: column;
+          }
+        }
+        .swiper-pagination {
+          display: flex;
+          top: 61%;
+          left: 56%;
+          transform: translate3d(-50px, -50%, 0);
+          .swiper-pagination-bullet {
+            margin-right: 10px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .testimonial {
+    .swiper {
+      width: 100%;
+      height: 500px;
+      .swiper-wrapper {
+        .swiper-slide:not(.swiper-slide-active) {
+          filter: blur(8px);
+          transform: scale(0.8) translateY(150px);
+        }
+      }
+    }
+    .one,
+    .circle {
+      display: none;
+    }
+  }
+}

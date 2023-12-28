@@ -1,0 +1,198 @@
+.Hero-section {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  > .ripple-element {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../assets/herobg.jpg) no-repeat center;
+    background-size: cover;
+    filter: blur(5px);
+  }
+  .home-container {
+    z-index: 3;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    .container-left {
+      .about-me {
+        @extend .button;
+        background: var(--blue);
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .intro-text {
+        .profession {
+          font-family: inriaserif;
+        }
+        .formIndia {
+          background: linear-gradient(
+            to right,
+            rgb(219, 99, 0),
+            rgb(252, 223, 223),
+            rgb(0, 206, 0)
+          );
+          background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+    .container-right {
+      .avater-element {
+        width: 350px;
+        aspect-ratio: 1;
+        border-radius: 67% 33% 29% 71% / 47% 40% 60% 53%;
+        filter: grayscale(25%);
+        transition: .3s;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+          background: url("../assets/profile.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 67% 33% 29% 71% / 47% 40% 60% 53%;
+        }
+      }
+      .avater-element:hover{
+        border-radius: 50%;
+      }
+
+      .htmlpng {
+        left: 40%;
+        bottom: -10px;
+        animation: updown 3s linear infinite alternate-reverse;
+      }
+      .reactpng {
+        right: 0%;
+        top: 20%;
+        animation: updown 3s linear infinite alternate-reverse;
+      }
+      .javascriptpng {
+        left: 12%;
+        top: 10%;
+        animation: updown 3s linear infinite alternate-reverse;
+      }
+      @keyframes updown {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-20px);
+        }
+      }
+    }
+  }
+  .mouse {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 10;
+    width: 23px;
+    height: 36px;
+    border: 2px solid var(--black);
+    border-radius: 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 10px;
+      background: black;
+      border-radius: 12px;
+      left: 50%;
+      top: 20%;
+      transform: translateX(-50%);
+      animation: pointerupdown 1.5s linear infinite alternate;
+    }
+    @keyframes pointerupdown {
+      from {
+      }
+      to {
+        top: 28%;
+      }
+    }
+  }
+  .drop {
+    @extend .liquid;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 3;
+  }
+  .one {
+    bottom: 7%;
+    left: -5%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: rotate(40deg);
+  }
+  .two {
+    border-radius: 47% 53% 39% 61% / 44% 30% 70% 56%;
+    top: 10%;
+    right: -3%;
+    &::after {
+      left: 30px;
+    }
+    &::before {
+      left: 40px;
+    }
+  }
+  .three {
+    border-radius: 64% 36% 42% 58% / 65% 30% 70% 35%;
+    top: -13%;
+    right: 30%;
+    transform: rotate(-80deg);
+    &::after {
+      left: 30px;
+      top: 50px;
+    }
+    &::before {
+      top: 35px;
+      left: 40px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .Hero-section {
+    .home-container {
+      width: 95%;
+      .container-left {
+        order: 2;
+      }
+    }
+    .mouse {
+      position: absolute;
+      bottom: 50px;
+      left: 48%;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .Hero-section {
+    .one,
+    .two,
+    .three {
+      display: none;
+    }
+    .home-container {
+      .container-right {
+        margin: 30px 0px;
+        .avater-element {
+          width: 300px;
+        }
+        .htmlpng {
+          bottom: -30px;
+        }
+        .reactpng {
+          right: -10px;
+        }
+      }
+    }
+  }
+}

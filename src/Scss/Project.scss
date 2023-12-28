@@ -1,0 +1,114 @@
+#project {
+  .service {
+    .service-container {
+      width: 80%;
+      margin: auto;
+      h2 {
+        font-family: inriaserif;
+      }
+      h3 {
+        font-family: paprika;
+      }
+      .subject-container {
+        transition: 0.3s;
+        &:hover {
+          color: whitesmoke;
+        }
+        &:hover .subject-text {
+          color: whitesmoke;
+        }
+        &:hover .count {
+          color: whitesmoke;
+        }
+        &:hover svg {
+          color: whitesmoke;
+        }
+      }
+
+      .subject-four {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: -1;
+          height: 100%;
+          background: rgba(86, 0, 199, 0.767);
+          transition: 0.3s;
+        }
+      }
+      .subject-one:hover ~ .subject-four:after {
+        transform: translateY(-302%);
+      }
+      .subject-two:hover ~ .subject-four:after {
+        transform: translateY(-202%);
+      }
+      .subject-three:hover ~ .subject-four:after {
+        transform: translateY(-101%);
+      }
+    }
+  }
+  .project-container {
+    width: 80%;
+    margin: auto;
+    .project-container-header {
+      h2 {
+        font-family: inriaserif;
+      }
+      h3 {
+        font-family: paprika;
+      }
+    }
+
+    .swiper {
+      width: 100%;
+      height: 420px;
+      border-radius: 20px;
+      .swiper-wrapper {
+        width: 100%;
+
+        .swiper-slide {
+          border-radius: 20px;
+          overflow: hidden;
+        }
+
+        .swiper-slide:not(.swiper-slide-active) {
+          transform: scalex(0.8);
+          transform-origin: right;
+          filter: blur(12px);
+        }
+        .swiper-button-prev {
+          opacity: 0;
+        }
+        .swiper-button-next {
+          opacity: 0;
+        }
+      }
+      .swiper-pagination {
+        .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+        }
+        .swiper-pagination-bullet-active {
+          background: var(--black);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  #project {
+    .service {
+      .service-container {
+        width: 95%;
+      }
+    }
+  }
+  .project-container {
+    width: 95% !important;
+  }
+}

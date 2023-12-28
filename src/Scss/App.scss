@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@200;300;400;500;600;700&family=Readex+Pro:wght@200;300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,700;1,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;800&family=Paprika&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@200;300;400;500;600;700&family=Readex+Pro:wght@200;300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Jost:wght@200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;800&family=Paprika&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@200;300;400;500;600;700&family=Readex+Pro:wght@200;300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,700;1,800&display=swap');
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #ffff;
+  overflow-x: hidden;
+}
+html{
+  scroll-behavior: smooth;
+
+}
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #adadad; /* Set the color of the thumb */
+  border-radius: 6px; /* Set the border radius of the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set the color of the track */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Prompt", sans-serif;
+  font-family: "Readex Pro", sans-serif;
+  font-family: "Urbanist", sans-serif;
+  cursor: none;
+}
+//color
+:root {
+  --orange: #f75023;
+  --purple: #bf01fe;
+  --blue: #01b4ff;
+  --black: #06223f;
+  --grey:#a1a1a1;
+}
+.button {
+  position: relative;
+  padding: 11px 20px;
+  background: var(--purple);
+  border-radius: 25px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.137);
+  opacity: 0.75;
+  transition: 0.5s;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 13%;
+    width: 75%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.726);
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.726);
+    opacity: 0.7;
+    transition: 0.2s;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+  &:hover::after {
+    width: 50%;
+  }
+}
+//liquid drop demo
+.liquid {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  box-shadow: inset 20px 20px 30px rgba(0, 0, 0, 0.089),
+    25px 25px 15px rgba(0, 0, 0, 0.05), 25px 25px 32px rgba(0, 0, 0, 0.05),
+    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: liquid 3s linear infinite alternate-reverse;
+  transition: .3s;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    top: 40px;
+    left: 10px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    top: 25px;
+    left: 25px;
+  }
+  &:hover{
+    border-radius: 50%;
+  }
+}
+
+// custom cursor
+.cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  top: -10px;
+  left: -10px;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0.7;
+}
+.center {
+  position: fixed;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: var(--blue);
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0.7;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./Header.scss";
+@import "./Home.scss";
+@import "./ToTopScroll.scss";
+@import "./About.scss";
+@import "./Testimonial.scss";
+@import "./Footer.scss";
+@import "./Project.scss";
+@import "./Contact.scss";
+
+@media (max-width: 767px) {
+  * {
+    cursor: auto;
+  }
+  @keyframes liquid {
+    from {
+    }
+    to {
+      border-radius: 50%;
+    }
+  }
+}
