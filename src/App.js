@@ -57,19 +57,10 @@ const App = () => {
   //loading page
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    // This effect runs after the component has mounted
-    const handleLoad = () => {
-      // Set isLoading to false when the window has finished loading
-      setIsLoading(false);
-    };
-    // Subscribe to the load event
-    window.addEventListener("load", handleLoad);
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []); // The empty dependency array means this effect runs only once, similar to componentDidMount
+setTimeout(() => {
+  setIsLoading(false)
+
+}, 1700);
 
   return (
     <>
