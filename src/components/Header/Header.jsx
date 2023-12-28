@@ -6,7 +6,7 @@ const Header = ({ textEnter, textLeave }) => {
   const [activeLink, setActiveLink] = useState('home');
   return (
     <header className="fixed top-0 left-0 py-4">
-      <nav className="px-2 md:px-32  flex justify-around md:justify-between items-center">
+      <nav className="px-6 md:px-32  flex justify-between items-center">
         <a
           href="#"
           className="logo flex justify-center items-center"
