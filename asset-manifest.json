@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/Portfolio-liquid/static/css/main.9b73da41.css",
+    "main.js": "/Portfolio-liquid/static/js/main.346d3502.js",
+    "static/media/Screenshot_6.png": "/Portfolio-liquid/static/media/Screenshot_6.fa944a1a606764f0a3bc.png",
+    "static/media/Screenshot_5.png": "/Portfolio-liquid/static/media/Screenshot_5.bdc3af3a74f6d27a101d.png",
+    "static/media/Screenshot_2.png": "/Portfolio-liquid/static/media/Screenshot_2.c2b26ba1d77e599da026.png",
+    "static/media/Screenshot_4.png": "/Portfolio-liquid/static/media/Screenshot_4.f7ebe7a2853e574dd352.png",
+    "static/media/Screenshot_7.png": "/Portfolio-liquid/static/media/Screenshot_7.fa3ec10c47fe752555fc.png",
+    "static/media/Loading.gif": "/Portfolio-liquid/static/media/Loading.7f686c03a467bef7dac6.gif",
+    "static/media/Screenshot_8.png": "/Portfolio-liquid/static/media/Screenshot_8.28e192df1cde26e88cab.png",
+    "static/media/Screenshot_3.png": "/Portfolio-liquid/static/media/Screenshot_3.c7e24a23db36502fdf3e.png",
+    "static/media/profile.jpg": "/Portfolio-liquid/static/media/profile.e4e6daf8de65ab23254a.jpg",
+    "static/media/herobg.jpg": "/Portfolio-liquid/static/media/herobg.2539496edfde4ef41217.jpg",
+    "static/media/Sujoy Ghosal.pdf": "/Portfolio-liquid/static/media/Sujoy Ghosal.d7ee5e0493b4b3ef9991.pdf",
+    "static/media/free-react-9294867-7578010.png": "/Portfolio-liquid/static/media/free-react-9294867-7578010.2be2067f759949c9667f.png",
+    "static/media/free-javascript-9294848-7577991.png": "/Portfolio-liquid/static/media/free-javascript-9294848-7577991.d577b080926951b1fa65.png",
+    "static/media/tailwind.png": "/Portfolio-liquid/static/media/tailwind.549c1e457e1dbc8c3057.png",
+    "static/media/free-html-5728485-4781249.png": "/Portfolio-liquid/static/media/free-html-5728485-4781249.c3d66d6e515703dd7429.png",
+    "static/media/bootstrap.png": "/Portfolio-liquid/static/media/bootstrap.09d756482c01d0fd02bb.png",
+    "static/media/black_logo.png": "/Portfolio-liquid/static/media/black_logo.eb525641d8989dc2f34a.png",
+    "static/media/5.png": "/Portfolio-liquid/static/media/5.8aa861f6ee7c69a06b5b.png",
+    "static/media/client3.jpg": "/Portfolio-liquid/static/media/client3.153a503cd59983335b00.jpg",
+    "static/media/client1.jpg": "/Portfolio-liquid/static/media/client1.ef5f49406df559132212.jpg",
+    "static/media/1.png": "/Portfolio-liquid/static/media/1.2c866b69b5c8f8eac550.png",
+    "static/media/6.png": "/Portfolio-liquid/static/media/6.ccf302e78cf96d0a672d.png",
+    "static/media/client5.jpg": "/Portfolio-liquid/static/media/client5.b31799dd23591d4ae6d7.jpg",
+    "static/media/client7.jpg": "/Portfolio-liquid/static/media/client7.4706c41d6f21bbfd9e02.jpg",
+    "static/media/client2.jpg": "/Portfolio-liquid/static/media/client2.6ee579324ccc67ade0e4.jpg",
+    "static/media/client6.jpg": "/Portfolio-liquid/static/media/client6.013aa350d8ab263e5feb.jpg",
+    "static/media/client4.jpg": "/Portfolio-liquid/static/media/client4.57dcfe4f56d6daead3ff.jpg",
+    "static/media/12.png": "/Portfolio-liquid/static/media/12.ff572ddc991f5dae5881.png",
+    "static/media/css3.png": "/Portfolio-liquid/static/media/css3.01af6e5357cc2c119e14.png",
+    "index.html": "/Portfolio-liquid/index.html",
+    "main.9b73da41.css.map": "/Portfolio-liquid/static/css/main.9b73da41.css.map",
+    "main.346d3502.js.map": "/Portfolio-liquid/static/js/main.346d3502.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b73da41.css",
+    "static/js/main.346d3502.js"
+  ]
+}
