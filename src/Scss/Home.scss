@@ -47,7 +47,7 @@
         aspect-ratio: 1;
         border-radius: 67% 33% 29% 71% / 47% 40% 60% 53%;
         filter: grayscale(25%);
-        transition: .3s;
+        transition: 0.3s;
         &::after {
           content: "";
           position: absolute;
@@ -61,7 +61,7 @@
           border-radius: 67% 33% 29% 71% / 47% 40% 60% 53%;
         }
       }
-      .avater-element:hover{
+      .avater-element:hover {
         border-radius: 50%;
       }
 
@@ -191,6 +191,21 @@
         }
         .reactpng {
           right: -10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .Hero-section {
+    .home-container {
+      .container-right {
+        .avater-element {
+          width: 250px;
+        }
+        .reactpng {
+          right: 10px;
         }
       }
     }

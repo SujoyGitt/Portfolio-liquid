@@ -13,7 +13,7 @@ const Header = ({ textEnter, textLeave }) => {
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
         >
-          <img src={logo} alt="" className="opacity-40 w-6/12 " />
+          <img src={logo} alt="" className="opacity-40 w-5/12 sm:w-6/12 " />
         </a>
 
         <div className="menu flex items-center">

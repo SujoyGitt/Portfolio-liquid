@@ -9,11 +9,10 @@ import About from "./Pages/About";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 import Footer from "./components/Footer/Footer";
-import {ReactLenis} from '@studio-freight/react-lenis';
+import { ReactLenis } from "@studio-freight/react-lenis";
 import Loading from "./Pages/Loading";
 
 const App = () => {
- 
   const [mousePointer, setmousePointer] = useState(false);
   const [mousePosition, setmousePosition] = useState({
     x: 0,
@@ -57,15 +56,24 @@ const App = () => {
   const textLeave = () => setcursorVariant("default");
   //loading page
   const [isLoading, setIsLoading] = useState(true);
-  window.onload = function() {
-    setIsLoading(false);
-  }
- 
-  
+
+  useEffect(() => {
+    // This effect runs after the component has mounted
+    const handleLoad = () => {
+      // Set isLoading to false when the window has finished loading
+      setIsLoading(false);
+    };
+    // Subscribe to the load event
+    window.addEventListener("load", handleLoad);
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []); // The empty dependency array means this effect runs only once, similar to componentDidMount
+
   return (
-   
     <>
-{isLoading&&<Loading/>}
+      {isLoading && <Loading />}
       <Header textEnter={textEnter} textLeave={textLeave} />
       <ToTopScroll textEnter={textEnter} textLeave={textLeave} />
       {mousePointer && (
@@ -89,8 +97,8 @@ const App = () => {
       <About textEnter={textEnter} textLeave={textLeave} />
       <Project textEnter={textEnter} textLeave={textLeave} />
       <Testimonial />
-      <Contact textEnter={textEnter} textLeave={textLeave}/>
-      <Footer textEnter={textEnter} textLeave={textLeave}/>
+      <Contact textEnter={textEnter} textLeave={textLeave} />
+      <Footer textEnter={textEnter} textLeave={textLeave} />
     </>
   );
 };

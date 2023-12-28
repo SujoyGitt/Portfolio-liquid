@@ -166,6 +166,9 @@ html{
 @import "./Contact.scss";
 
 @media (max-width: 767px) {
+  html{
+    font-size: 90%;
+  }
   * {
     cursor: auto;
   }
@@ -177,3 +180,7 @@ html{
     }
   }
 }
+@media (max-width: 400px) {
+  html{
+    font-size: 80%;
+  }}

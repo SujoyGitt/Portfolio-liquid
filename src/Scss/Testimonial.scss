@@ -29,6 +29,7 @@
         .swiper-slide:not(.swiper-slide-active) {
           filter: blur(8px);
           transform: scale(0.8) translateY(50px);
+          z-index: -1;
         }
         img {
           object-fit: cover;
@@ -63,10 +64,11 @@
   .testimonial {
     .testimonial-container {
       .swiper {
-        height: 700px;
+        height: 80vh;
 
         .swiper-wrapper {
-          width: 100%;
+          width: 90%;
+          margin: auto;
           .swiper-slide:not(.swiper-slide-active) {
             filter: blur(8px);
             transform: scale(0.8) translateY(100px);
