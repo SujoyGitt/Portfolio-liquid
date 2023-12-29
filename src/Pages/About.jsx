@@ -27,7 +27,7 @@ const About = ({ textEnter, textLeave }) => {
         trigger: ".process",
         start: "top 120%",
         end: "bottom 80%",
-        scrub: 1,
+        scrub: 2,
       },
     });
     gsap.from(".skill-card", {
@@ -39,7 +39,28 @@ const About = ({ textEnter, textLeave }) => {
         scroller: "body",
         trigger: ".skill-card",
         
-        scrub: 1,
+        scrub: 2,
+      },
+    });
+    gsap.from(".two", {
+      x: -150,
+      duration:1,
+      stagger:1,
+      opacity: 0,
+      scrollTrigger: {
+        scroller: "body",
+        trigger: ".about-top",
+        scrub: false,
+      },
+    });
+    gsap.from(".three", {
+      scale: 0.5,
+      duration:1,
+      stagger:1,
+      scrollTrigger: {
+        scroller: "body",
+        trigger: ".about-middle",
+        scrub: false,
       },
     });
     
@@ -177,7 +198,7 @@ const About = ({ textEnter, textLeave }) => {
         <img
           src={two}
           alt="design"
-          className="w-32 absolute -top-20  -z-10 left-0"
+          className="w-32 absolute -top-20  -z-10 left-0 two"
         />
         <div className="about-middle-container">
           <h3 className="text-3xl font-semibold ">Skills</h3>
@@ -356,7 +377,7 @@ const About = ({ textEnter, textLeave }) => {
             </svg>
           </a>
         </div>
-        <img src={three} alt="" className="absolute -bottom-28 right-0 -z-10" />
+        <img src={three} alt="" className="absolute -bottom-28 right-0 -z-10 three" />
       </div>
     </div>
   );

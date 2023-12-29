@@ -11,12 +11,13 @@ const ToTopScroll = ({ textEnter, textLeave }) => {
     gsap.from(".toTopScroll", {
       opacity: 0,
       x: 200,
+      stagger:1,
       duration: 1,
       scrollTrigger: {
         trigger: ".about",
         start: "top bottom",
         end: "top center",
-        scrub: true,
+        scrub: 1,
       },
     });
   }, []);
