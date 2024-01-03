@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Scss/App.scss";
 import Header from "./components/Header/Header";
 import Home from "./Pages/Home";
@@ -9,8 +9,9 @@ import About from "./Pages/About";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 import Footer from "./components/Footer/Footer";
-import { ReactLenis } from "@studio-freight/react-lenis";
 import Loading from "./Pages/Loading";
+import musicFile from './assets/dripping-water-nature-sounds-8050.mp3'; 
+import Waterripple from "./Pages/Waterripple";
 
 const App = () => {
   const [mousePointer, setmousePointer] = useState(false);
@@ -47,7 +48,7 @@ const App = () => {
       y: mousePosition.y - 40,
       backgroundColor: "#01b4ff",
       opacity: 0.1,
-      border: "none",
+      border: "0px solid transparent",
       top: 0,
       left: 0,
     },
@@ -60,12 +61,26 @@ const App = () => {
   setTimeout(() => {
     setIsLoading(false);
   }, 2000);
+// add music 
+const [audioPlayer, setAudioPlayer] = useState(new Audio(musicFile));
+const [isPlaying, setIsPlaying] = useState(false);
+
+const handlePlayPause = () => {
+  if (isPlaying) {
+    audioPlayer.pause();
+  } else {
+    audioPlayer.play();
+    alert("if you stop music click again water canvas")
+  }
+  setIsPlaying(!isPlaying);
+};
 
   return (
     <>
       {isLoading && <Loading />}
-      <Header textEnter={textEnter} textLeave={textLeave} />
-      <ToTopScroll textEnter={textEnter} textLeave={textLeave} />
+      <Waterripple handlePlayPause={handlePlayPause}/>
+      <Header textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
+      <ToTopScroll textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
       {mousePointer && (
         <motion.div
           className="cursor flex justify-center items-center"
@@ -83,12 +98,12 @@ const App = () => {
         ></motion.div>
       )}
 
-      <Home textEnter={textEnter} textLeave={textLeave} />
-      <About textEnter={textEnter} textLeave={textLeave} />
-      <Project textEnter={textEnter} textLeave={textLeave} />
+      <Home textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
+      <About textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
+      <Project textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
       <Testimonial />
-      <Contact textEnter={textEnter} textLeave={textLeave} />
-      <Footer textEnter={textEnter} textLeave={textLeave} />
+      <Contact textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
+      <Footer textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause} />
     </>
   );
 };

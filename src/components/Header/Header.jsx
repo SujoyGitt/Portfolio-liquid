@@ -12,6 +12,7 @@ const Header = ({ textEnter, textLeave }) => {
           className="logo flex justify-center items-center"
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
+         
         >
           <img src={logo} alt="" className="opacity-40 w-5/12 sm:w-6/12 " />
         </a>
@@ -21,7 +22,8 @@ const Header = ({ textEnter, textLeave }) => {
             className="menubar"
             onMouseEnter={textEnter}
             onMouseLeave={textLeave}
-            onClick={() => setmenuActive(!menuActive)}
+            onClick={() =>{ setmenuActive(!menuActive)}}
+           
           >
             <div className="menu-line rounded-2xl w-7 h-1"></div>
             <div className="menu-line rounded-2xl w-7 h-1 mt-1.5"></div>

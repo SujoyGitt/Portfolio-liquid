@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useLenis } from '@studio-freight/react-lenis';
 
-const ToTopScroll = ({ textEnter, textLeave }) => {
+const ToTopScroll = ({ textEnter, textLeave}) => {
   let [height, setheight] = useState(0);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -46,4 +46,4 @@ const ToTopScroll = ({ textEnter, textLeave }) => {
   );
 };
 
-export default ToTopScroll;
+export default memo(ToTopScroll);

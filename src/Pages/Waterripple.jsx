@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-const Waterripple = () => {
+const Waterripple = ({handlePlayPause}) => {
   useEffect(() => {
     $(document).ready(function () {
       $(".ripple-element").ripples({
@@ -10,7 +10,7 @@ const Waterripple = () => {
     });
   }, []);
   return (
-    <div className="ripple-element"></div>
+    <div className="ripple-element" onClick={handlePlayPause}></div>
     )
 }
 
