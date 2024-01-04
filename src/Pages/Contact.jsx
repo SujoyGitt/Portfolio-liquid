@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import Six from "../assets/11.png"
-import Seven from "../assets/12.png"
+import React, {memo, useState } from "react";
+import Six from "../assets/11.webp"
+import Seven from "../assets/12.webp"
 const Contact = ({textEnter,textLeave}) => {
 
   //see  what is say users start
@@ -125,4 +125,4 @@ const Contact = ({textEnter,textLeave}) => {
   );
 };
 
-export default Contact;
+export default memo(Contact);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -10,15 +10,16 @@ import {
 } from "swiper/modules";
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
-import Testimonialtopimg from "../assets/1.png";
-import client1 from "../assets/client1.jpg";
-import client2 from "../assets/client2.jpg";
-import client3 from "../assets/client3.jpg";
-import client4 from "../assets/client4.jpg";
-import client5 from "../assets/client5.jpg";
-import client6 from "../assets/client6.jpg";
-import client7 from "../assets/client7.jpg";
-const Testimonial = () => {
+import Testimonialtopimg from "../assets/1.webp";
+import client1 from "../assets/client1.webp";
+import client2 from "../assets/client2.webp";
+import client3 from "../assets/client3.webp";
+import client4 from "../assets/client4.webp";
+import client5 from "../assets/client5.webp";
+import client6 from "../assets/client6.webp";
+import client7 from "../assets/client7.webp";
+console.log("run testimonial children")
+const Testimonial = ({textEnter,textLeave}) => {
   return (
     <div className="pb-12 md:pb-4 min-h-screen w-full my-12 md:my-4 relative testimonial" id="testimonial">
       <img
@@ -44,6 +45,8 @@ const Testimonial = () => {
           direction="vertical"
           spaceBetween={0}
           slidesPerView={2}
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave}
         >
           <SwiperSlide>
             <a target="blank" href="https://www.freelancer.in/u/Sujoy321?review_context_id=2215717&review_type=contest&sb=t">
@@ -199,4 +202,4 @@ const Testimonial = () => {
   ); 
 };
 
-export default Testimonial;
+export default memo(Testimonial);

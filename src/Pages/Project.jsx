@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -10,14 +10,14 @@ import {
 } from "swiper/modules";
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
-import Eccomerse from "../assets/Screenshot_8.png";
-import Travel from "../assets/Screenshot_4.png";
-import Youtube from "../assets/Screenshot_5.png";
-import School from "../assets/Screenshot_6.png";
-import Facebook from "../assets/Screenshot_7.png";
-import Cyberfiction from "../assets/Screenshot_2.png";
-import Fooddesk from "../assets/Screenshot_3.png";
-import Five from "../assets/5.png";
+import Eccomerse from "../assets/Screenshot_8.webp";
+import Travel from "../assets/Screenshot_4.webp";
+import Youtube from "../assets/Screenshot_5.webp";
+import School from "../assets/Screenshot_6.webp";
+import Facebook from "../assets/Screenshot_7.webp";
+import Cyberfiction from "../assets/Screenshot_2.webp";
+import Fooddesk from "../assets/Screenshot_3.webp";
+import Five from "../assets/5.webp";
 const Project = ({textEnter,textLeave}) => {
   return (
     <div id="project" className="w-full relative">
@@ -174,6 +174,8 @@ const Project = ({textEnter,textLeave}) => {
             },
            
           }}
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave}
         >
           <SwiperSlide className="" >
             <a target="blank" href="https://fashionstorein.netlify.app/">
@@ -246,4 +248,4 @@ const Project = ({textEnter,textLeave}) => {
   );
 };
 
-export default Project;
+export default memo(Project);

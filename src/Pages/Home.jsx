@@ -1,12 +1,12 @@
-import React from "react";
-import HtmlPng from "../assets/free-html-5728485-4781249.png";
-import JsPng from "../assets/free-javascript-9294848-7577991.png";
-import ReactPng from "../assets/free-react-9294867-7578010.png";
-import Waterripple from "./Waterripple";
+import React, { memo } from "react";
+import HtmlPng from "../assets/free-html-5728485-4781249.webp";
+import JsPng from "../assets/free-javascript-9294848-7577991.webp";
+import ReactPng from "../assets/free-react-9294867-7578010.webp";
 
-const Home = ({ textEnter, textLeave,handlePlayPause }) => {
+
+const Home = ({ textEnter, textLeave }) => {
  let text= "I'm Front-end Devoloper based in Burdwan, and I'm very passionate and dedicated to my work.";
-
+ console.log('child run');
   return (
     <div className="Hero-section flex justify-center items-center">
       <div className="drop one"></div>
@@ -90,4 +90,4 @@ const Home = ({ textEnter, textLeave,handlePlayPause }) => {
   );
 };
 
-export default Home;
+export default memo(Home);

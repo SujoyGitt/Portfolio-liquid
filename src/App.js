@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./Scss/App.scss";
 import Header from "./components/Header/Header";
 import Home from "./Pages/Home";
@@ -43,7 +43,7 @@ const App = () => {
     text: {
       height: 100,
       width: 100,
-      transition: 1,
+      transition: 0.5,
       x: mousePosition.x - 40,
       y: mousePosition.y - 40,
       backgroundColor: "#01b4ff",
@@ -53,28 +53,29 @@ const App = () => {
       left: 0,
     },
   };
-  const textEnter = () => setcursorVariant("text");
-  const textLeave = () => setcursorVariant("default");
-  //loading page
-  const [isLoading, setIsLoading] = useState(true);
+  const textEnter = useCallback( () => { setcursorVariant("text") },  [], ) ;
+  const textLeave = useCallback( () => { setcursorVariant("default") },  [], ) ;
 
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 2000);
 // add music 
 const [audioPlayer, setAudioPlayer] = useState(new Audio(musicFile));
 const [isPlaying, setIsPlaying] = useState(false);
 
-const handlePlayPause = () => {
-  if (isPlaying) {
-    audioPlayer.pause();
-  } else {
-    audioPlayer.play();
-    alert("if you stop music click again water canvas")
-  }
-  setIsPlaying(!isPlaying);
-};
+const handlePlayPause = useCallback(() => {
+    if (isPlaying) {
+      audioPlayer.pause();
+    } else {
+      audioPlayer.play();
+      alert("if you stop music click again water canvas")
+    }
+    setIsPlaying(!isPlaying);
+  },[isPlaying])
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // Adjust loading time as needed
+  }, []);
   return (
     <>
       {isLoading && <Loading />}
@@ -98,12 +99,12 @@ const handlePlayPause = () => {
         ></motion.div>
       )}
 
-      <Home textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
-      <About textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
-      <Project textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
-      <Testimonial />
-      <Contact textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
-      <Footer textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause} />
+      <Home textEnter={textEnter} textLeave={textLeave}/>
+      <About textEnter={textEnter} textLeave={textLeave} />
+      <Project textEnter={textEnter} textLeave={textLeave} />
+      <Testimonial textEnter={textEnter} textLeave={textLeave}/>
+      <Contact textEnter={textEnter} textLeave={textLeave} />
+      <Footer textEnter={textEnter} textLeave={textLeave} />
     </>
   );
 };

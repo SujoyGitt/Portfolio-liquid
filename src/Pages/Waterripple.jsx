@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { memo, useEffect } from 'react'
 
 const Waterripple = ({handlePlayPause}) => {
   useEffect(() => {
@@ -9,9 +9,10 @@ const Waterripple = ({handlePlayPause}) => {
       });
     });
   }, []);
+
   return (
     <div className="ripple-element" onClick={handlePlayPause}></div>
     )
 }
 
-export default Waterripple;
+export default memo(Waterripple);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/black_logo.png";
+import logo from "../../assets/black_logo.webp";
 import Resume from "../../assets/Sujoy Ghosal.pdf";
 const Header = ({ textEnter, textLeave }) => {
   const [menuActive, setmenuActive] = useState(false);
