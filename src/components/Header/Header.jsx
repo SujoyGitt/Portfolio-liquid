@@ -12,7 +12,7 @@ const Header = ({ textEnter, textLeave }) => {
           className="logo flex justify-center items-center"
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
-         
+         role="logo"
         >
           <img src={logo} alt="" className="opacity-40 w-5/12 sm:w-6/12 " />
         </a>

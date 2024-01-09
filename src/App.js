@@ -10,7 +10,7 @@ import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 import Footer from "./components/Footer/Footer";
 import Loading from "./Pages/Loading";
-import musicFile from './assets/dripping-water-nature-sounds-8050.mp3'; 
+import musicFile from "./assets/dripping-water-nature-sounds-8050.mp3";
 import Waterripple from "./Pages/Waterripple";
 
 const App = () => {
@@ -53,24 +53,26 @@ const App = () => {
       left: 0,
     },
   };
-  const textEnter = useCallback( () => { setcursorVariant("text") },  [], ) ;
-  const textLeave = useCallback( () => { setcursorVariant("default") },  [], ) ;
+  const textEnter = useCallback(() => {
+    setcursorVariant("text");
+  }, []);
+  const textLeave = useCallback(() => {
+    setcursorVariant("default");
+  }, []);
 
-// add music 
-const [audioPlayer, setAudioPlayer] = useState(new Audio(musicFile));
-const [isPlaying, setIsPlaying] = useState(false);
+  // add music
+  const [audioPlayer, setAudioPlayer] = useState(new Audio(musicFile));
+  const [isPlaying, setIsPlaying] = useState(false);
 
-const handlePlayPause = useCallback(() => {
+  const handlePlayPause = useCallback(() => {
     if (isPlaying) {
       audioPlayer.pause();
     } else {
       audioPlayer.play();
-      alert("if you stop music click again water canvas")
     }
     setIsPlaying(!isPlaying);
-  },[isPlaying])
+  }, [isPlaying]);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -79,9 +81,17 @@ const handlePlayPause = useCallback(() => {
   return (
     <>
       {isLoading && <Loading />}
-      <Waterripple handlePlayPause={handlePlayPause}/>
-      <Header textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
-      <ToTopScroll textEnter={textEnter} textLeave={textLeave} handlePlayPause={handlePlayPause}/>
+      <Waterripple handlePlayPause={handlePlayPause} isPlaying={isPlaying} />
+      <Header
+        textEnter={textEnter}
+        textLeave={textLeave}
+        handlePlayPause={handlePlayPause}
+      />
+      <ToTopScroll
+        textEnter={textEnter}
+        textLeave={textLeave}
+        handlePlayPause={handlePlayPause}
+      />
       {mousePointer && (
         <motion.div
           className="cursor flex justify-center items-center"
@@ -99,10 +109,10 @@ const handlePlayPause = useCallback(() => {
         ></motion.div>
       )}
 
-      <Home textEnter={textEnter} textLeave={textLeave}/>
+      <Home textEnter={textEnter} textLeave={textLeave} />
       <About textEnter={textEnter} textLeave={textLeave} />
       <Project textEnter={textEnter} textLeave={textLeave} />
-      <Testimonial textEnter={textEnter} textLeave={textLeave}/>
+      <Testimonial textEnter={textEnter} textLeave={textLeave} />
       <Contact textEnter={textEnter} textLeave={textLeave} />
       <Footer textEnter={textEnter} textLeave={textLeave} />
     </>

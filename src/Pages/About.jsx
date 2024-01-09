@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import process1 from "../assets/process.webp";
 import process2 from "../assets/process2.webp";
 import process3 from "../assets/process3.webp";
@@ -207,9 +207,10 @@ const About = ({ textEnter, textLeave }) => {
           </h1>
           <div className="skills-container w-full lg:w-9/12 m-auto flex items-center flex-wrap      first-line:sm:flex-nowrap">
             <div className="skill-card relative bg-white rounded-md py-5 border-2  flex items-center">
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" className="absolute right-3 top-3" target="_black" onMouseEnter={textEnter} onMouseLeave={textLeave}>
               <svg
                 stroke="currentColor"
-                className="absolute right-3 top-3"
+                
                 fill="currentColor"
                 stroke-width="0"
                 viewBox="0 0 24 24"
@@ -220,6 +221,7 @@ const About = ({ textEnter, textLeave }) => {
                 <path fill="none" d="M0 0h24v24H0z"></path>
                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
               </svg>
+              </a>
               <div className="skill-logo  mx-4">
                 <img src={htmllogo} alt="" className="w-12" />
               </div>
@@ -229,9 +231,10 @@ const About = ({ textEnter, textLeave }) => {
               </div>
             </div>
             <div className="skill-card relative bg-white rounded-md py-5 border-2  flex items-center">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/css" className="absolute right-3 top-3" target="_black" onMouseEnter={textEnter} onMouseLeave={textLeave}>
               <svg
                 stroke="currentColor"
-                className="absolute right-3 top-3"
+                
                 fill="currentColor"
                 stroke-width="0"
                 viewBox="0 0 24 24"
@@ -242,6 +245,7 @@ const About = ({ textEnter, textLeave }) => {
                 <path fill="none" d="M0 0h24v24H0z"></path>
                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
               </svg>
+              </a>
               <div className="skill-logo  mx-4">
                 <img src={csslogo} alt="" className="w-12" />
               </div>
@@ -251,9 +255,10 @@ const About = ({ textEnter, textLeave }) => {
               </div>
             </div>
             <div className="skill-card relative bg-white rounded-md py-5 border-2  flex items-center">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" className="absolute right-3 top-3" target="_black" onMouseEnter={textEnter} onMouseLeave={textLeave}>
               <svg
                 stroke="currentColor"
-                className="absolute right-3 top-3"
+                
                 fill="currentColor"
                 stroke-width="0"
                 viewBox="0 0 24 24"
@@ -264,6 +269,7 @@ const About = ({ textEnter, textLeave }) => {
                 <path fill="none" d="M0 0h24v24H0z"></path>
                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
               </svg>
+              </a>
               <div className="skill-logo  mx-4">
                 <img src={jslogo} alt="" className="w-12" />
               </div>
@@ -273,9 +279,10 @@ const About = ({ textEnter, textLeave }) => {
               </div>
             </div>
             <div className="skill-card relative bg-white rounded-md py-5 border-2 flex items-center">
+            <a href="https://react.dev/" className="absolute right-3 top-3" target="_black" onMouseEnter={textEnter} onMouseLeave={textLeave}>
               <svg
                 stroke="currentColor"
-                className="absolute right-3 top-3"
+                
                 fill="currentColor"
                 stroke-width="0"
                 viewBox="0 0 24 24"
@@ -286,6 +293,7 @@ const About = ({ textEnter, textLeave }) => {
                 <path fill="none" d="M0 0h24v24H0z"></path>
                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
               </svg>
+              </a>
               <div className="skill-logo  mx-4">
                 <img src={Reactlogo} alt="" className="w-12" />
               </div>
@@ -295,9 +303,10 @@ const About = ({ textEnter, textLeave }) => {
               </div>
             </div>
             <div className="skill-card relative bg-white rounded-md py-5 border-2 flex items-center">
+            <a href="https://getbootstrap.com/" className="absolute right-3 top-3" target="_black" onMouseEnter={textEnter} onMouseLeave={textLeave}>
               <svg
                 stroke="currentColor"
-                className="absolute right-3 top-3"
+                
                 fill="currentColor"
                 stroke-width="0"
                 viewBox="0 0 24 24"
@@ -308,6 +317,7 @@ const About = ({ textEnter, textLeave }) => {
                 <path fill="none" d="M0 0h24v24H0z"></path>
                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
               </svg>
+              </a>
               <div className="skill-logo  mx-4">
                 <img src={boostraplogo} alt="" className="w-12" />
               </div>
@@ -317,9 +327,10 @@ const About = ({ textEnter, textLeave }) => {
               </div>
             </div>
             <div className="skill-card relative bg-white rounded-md py-5 border-2  flex items-center">
+            <a href="https://tailwindcss.com/" className="absolute right-3 top-3" target="_black" onMouseEnter={textEnter} onMouseLeave={textLeave}>
               <svg
                 stroke="currentColor"
-                className="absolute right-3 top-3"
+                
                 fill="currentColor"
                 stroke-width="0"
                 viewBox="0 0 24 24"
@@ -330,6 +341,7 @@ const About = ({ textEnter, textLeave }) => {
                 <path fill="none" d="M0 0h24v24H0z"></path>
                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
               </svg>
+              </a>
               <div className="skill-logo  mx-4">
                 <img src={tailwindlogo} alt="" className="w-12" />
               </div>
@@ -383,4 +395,4 @@ const About = ({ textEnter, textLeave }) => {
   );
 };
 
-export default About;
+export default memo(About);

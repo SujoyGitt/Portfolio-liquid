@@ -96,6 +96,7 @@ const Contact = ({textEnter,textLeave}) => {
                 placeholder="Your Phone"
                 name="phone"  value={data.phone}  onChange={InputEvent}
                 id="phone"
+                max="10"
                 required
               />
             </div>

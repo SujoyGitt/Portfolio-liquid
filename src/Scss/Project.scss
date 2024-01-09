@@ -11,6 +11,7 @@
       }
       .subject-container {
         transition: 0.3s;
+        position: relative;
         &:hover {
           color: whitesmoke;
         }
@@ -22,6 +23,24 @@
         }
         &:hover svg {
           color: whitesmoke;
+        }
+        &:hover::before{
+          opacity: 1;
+        }
+        &:before{
+          content:'';
+          width: 250px;
+          height: 200px;
+          object-fit: cover;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          opacity: 0;
+          background: red;
+          transition: .3s;
+          box-shadow: 0px 0px 15px 10px rgba(3, 3, 3, 0.13);
+          border-radius: 10px;
+          z-index: 2;
         }
       }
 
@@ -38,6 +57,29 @@
           height: 100%;
           background: rgba(86, 0, 199, 0.767);
           transition: 0.3s;
+        }
+        &::before{
+          background: url('../assets/React\ devolopement.webp');
+          background-size: cover;
+        }
+      }
+      .subject-one{
+        &::before{
+          background: url('../assets/UI-Developers-And-UX-Developers.webp');
+          background-size: cover;
+          background-position: bottom;
+        }
+      }
+      .subject-two{
+        &::before{
+          background: url('../assets/Frontend\ devolopment.webp');
+          background-size: cover;
+        }
+      }
+      .subject-three{
+        &::before{
+          background: url('../assets/Psd\ to\ html.webp');
+          background-size: cover;
         }
       }
       .subject-one:hover ~ .subject-four:after {
@@ -105,6 +147,9 @@
     .service {
       .service-container {
         width: 95%;
+        &::after,&::before{
+          display: none;
+        }
       }
     }
   }

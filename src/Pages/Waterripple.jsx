@@ -1,6 +1,7 @@
-import React, { memo, useEffect } from 'react'
-
-const Waterripple = ({handlePlayPause}) => {
+import React, { memo, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+const Waterripple = ({ handlePlayPause,isPlaying }) => {
   useEffect(() => {
     $(document).ready(function () {
       $(".ripple-element").ripples({
@@ -9,10 +10,19 @@ const Waterripple = ({handlePlayPause}) => {
       });
     });
   }, []);
+  const notify = () => toast.warning("If you want to stop music click again water canvas");
 
   return (
-    <div className="ripple-element" onClick={handlePlayPause}></div>
-    )
-}
+    <>
+    <div
+      className="ripple-element"
+      onClick={handlePlayPause}
+      onMouseUp={notify}
+    ></div>
+    {isPlaying&&<ToastContainer />}
+    </>
+    
+  );
+};
 
 export default memo(Waterripple);
