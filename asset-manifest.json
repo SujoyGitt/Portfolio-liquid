@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-liquid/static/css/main.f7c7e062.css",
-    "main.js": "/Portfolio-liquid/static/js/main.b9f49d29.js",
+    "main.css": "/Portfolio-liquid/static/css/main.a8e699eb.css",
+    "main.js": "/Portfolio-liquid/static/js/main.0c44a544.js",
     "static/media/dripping-water-nature-sounds-8050.mp3": "/Portfolio-liquid/static/media/dripping-water-nature-sounds-8050.a9d1af0fb09abae31301.mp3",
     "static/media/Loading.gif": "/Portfolio-liquid/static/media/Loading.74a08eb253735214c85e.gif",
     "static/media/Sujoy Ghosal.pdf": "/Portfolio-liquid/static/media/Sujoy Ghosal.d7ee5e0493b4b3ef9991.pdf",
@@ -14,11 +14,15 @@
     "static/media/Screenshot_3.webp": "/Portfolio-liquid/static/media/Screenshot_3.9f9ffbf21cd8d1679cbb.webp",
     "static/media/Screenshot_2.webp": "/Portfolio-liquid/static/media/Screenshot_2.ecc97a2afe4255d21843.webp",
     "static/media/Screenshot_8.webp": "/Portfolio-liquid/static/media/Screenshot_8.88d1b767fd7b3951b58c.webp",
+    "static/media/UI-Developers-And-UX-Developers.webp": "/Portfolio-liquid/static/media/UI-Developers-And-UX-Developers.c6e26f01f172b0f403b6.webp",
+    "static/media/React devolopement.webp": "/Portfolio-liquid/static/media/React devolopement.519fb9ce67e1e41490c9.webp",
+    "static/media/Psd to html.webp": "/Portfolio-liquid/static/media/Psd to html.64efdb9cc452837ed393.webp",
     "static/media/free-react-9294867-7578010.webp": "/Portfolio-liquid/static/media/free-react-9294867-7578010.a23f450389da6a2d1c53.webp",
     "static/media/free-javascript-9294848-7577991.webp": "/Portfolio-liquid/static/media/free-javascript-9294848-7577991.59ebd480200232ade73f.webp",
     "static/media/client3.webp": "/Portfolio-liquid/static/media/client3.43889430a1b2d67d0f8f.webp",
     "static/media/client1.webp": "/Portfolio-liquid/static/media/client1.45c8083209fcc387c659.webp",
     "static/media/tailwind.webp": "/Portfolio-liquid/static/media/tailwind.11cb4d0ebbea74d62420.webp",
+    "static/media/Frontend devolopment.webp": "/Portfolio-liquid/static/media/Frontend devolopment.6552c0baa3d991f1c8be.webp",
     "static/media/black_logo.webp": "/Portfolio-liquid/static/media/black_logo.09654429f73587c0ec95.webp",
     "static/media/bootstrap.webp": "/Portfolio-liquid/static/media/bootstrap.c366fa0c31ebc95808c4.webp",
     "static/media/client5.webp": "/Portfolio-liquid/static/media/client5.ff375bfda3fc849d7e22.webp",
@@ -40,11 +44,11 @@
     "static/media/css3.webp": "/Portfolio-liquid/static/media/css3.2790013b9db3b86dcca9.webp",
     "static/media/html.webp": "/Portfolio-liquid/static/media/html.5183c195683c99d6f2c1.webp",
     "index.html": "/Portfolio-liquid/index.html",
-    "main.f7c7e062.css.map": "/Portfolio-liquid/static/css/main.f7c7e062.css.map",
-    "main.b9f49d29.js.map": "/Portfolio-liquid/static/js/main.b9f49d29.js.map"
+    "main.a8e699eb.css.map": "/Portfolio-liquid/static/css/main.a8e699eb.css.map",
+    "main.0c44a544.js.map": "/Portfolio-liquid/static/js/main.0c44a544.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7c7e062.css",
-    "static/js/main.b9f49d29.js"
+    "static/css/main.a8e699eb.css",
+    "static/js/main.0c44a544.js"
   ]
 }
