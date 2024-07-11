@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Portfolio-liquid/static/css/main.a8e699eb.css",
-    "main.js": "/Portfolio-liquid/static/js/main.0c44a544.js",
+    "main.css": "/Portfolio-liquid/static/css/main.a66a9884.css",
+    "main.js": "/Portfolio-liquid/static/js/main.0aa779c1.js",
     "static/media/dripping-water-nature-sounds-8050.mp3": "/Portfolio-liquid/static/media/dripping-water-nature-sounds-8050.a9d1af0fb09abae31301.mp3",
     "static/media/Loading.gif": "/Portfolio-liquid/static/media/Loading.74a08eb253735214c85e.gif",
-    "static/media/Sujoy Ghosal.pdf": "/Portfolio-liquid/static/media/Sujoy Ghosal.d7ee5e0493b4b3ef9991.pdf",
+    "static/media/Sujoy Ghosal.pdf": "/Portfolio-liquid/static/media/Sujoy Ghosal.46e3cba2acb866ff9213.pdf",
     "static/media/Screenshot_5.webp": "/Portfolio-liquid/static/media/Screenshot_5.30741469f2d0d4e2597f.webp",
     "static/media/profile.webp": "/Portfolio-liquid/static/media/profile.a779ae1f82142105cbcc.webp",
     "static/media/Screenshot_4.webp": "/Portfolio-liquid/static/media/Screenshot_4.174adf9774fa9cfb2f12.webp",
@@ -44,11 +44,11 @@
     "static/media/css3.webp": "/Portfolio-liquid/static/media/css3.2790013b9db3b86dcca9.webp",
     "static/media/html.webp": "/Portfolio-liquid/static/media/html.5183c195683c99d6f2c1.webp",
     "index.html": "/Portfolio-liquid/index.html",
-    "main.a8e699eb.css.map": "/Portfolio-liquid/static/css/main.a8e699eb.css.map",
-    "main.0c44a544.js.map": "/Portfolio-liquid/static/js/main.0c44a544.js.map"
+    "main.a66a9884.css.map": "/Portfolio-liquid/static/css/main.a66a9884.css.map",
+    "main.0aa779c1.js.map": "/Portfolio-liquid/static/js/main.0aa779c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8e699eb.css",
-    "static/js/main.0c44a544.js"
+    "static/css/main.a66a9884.css",
+    "static/js/main.0aa779c1.js"
   ]
 }
